@@ -9,7 +9,7 @@ import java.util.List;
 
 public class HomeFactoryTest
 {
-    private final HomeFactory homeFactory = new HomeFactoryImpl();
+    private final HomeFactory homeFactory = HomeFactoryImpl.getInstance();
 
     @Test
     public void testCreateHome() {

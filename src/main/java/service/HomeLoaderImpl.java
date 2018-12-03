@@ -5,6 +5,10 @@ import api.HomeFactory;
 import factories.HomeFactoryImpl;
 import models.Home;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class HomeLoaderImpl implements HomeLoader
 {
     private static HomeLoaderImpl instance = null;
@@ -20,6 +24,14 @@ public class HomeLoaderImpl implements HomeLoader
 
     public Home loadHome(String fileName, String separator)
     {
+        try(BufferedReader reader = new BufferedReader(new FileReader(fileName)))
+        {
+
+        }catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
         return null;
     }
 }
