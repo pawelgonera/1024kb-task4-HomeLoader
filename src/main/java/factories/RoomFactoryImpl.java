@@ -34,9 +34,11 @@ public class RoomFactoryImpl implements RoomFactory
 
         List<Element> elements = new LinkedList<>();
 
+        //get number of elements for how many iteration will be doing
         int elementsCount = Integer.parseInt(roomDetails.get(RoomProperty.COUNT_ELEMENTS));
         for(int i = 1; i <= elementsCount; i++)
         {
+            //collect String lines with elements infos to List
             elements.add(elementFactory.createElement(lines.get(i), separator));
         }
 

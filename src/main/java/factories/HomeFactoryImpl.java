@@ -34,15 +34,19 @@ public class HomeFactoryImpl implements HomeFactory
         List<Room> rooms = new LinkedList<>();
         List<String> roomsLines = new LinkedList<>();
 
+        //get room count for iteration
         int roomsCount = Integer.parseInt(homeDetails.get(HomeProperty.ROOM_COUNTS));
         int roomLinesIndex = 1;
         for(int i = 0; i < roomsCount; i++)
         {
             String[] roomValues = lines.get(roomLinesIndex).split(separator);
+            //get elements count
             int elementsCount = Integer.parseInt(roomValues[4]);
+            //collect String line with room infos to new List
             roomsLines.add(lines.get(roomLinesIndex++));
             for(int j = 0; j < elementsCount; j++)
             {
+                //collect elements for creates new Room with RoomFactory
                 roomsLines.add(lines.get(roomLinesIndex++));
             }
             rooms.add(roomFactory.createRoom(roomsLines, separator));

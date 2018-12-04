@@ -6,8 +6,10 @@ import factories.HomeFactoryImpl;
 import models.Home;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -34,8 +36,6 @@ public class HomeLoaderImpl implements HomeLoader
             {
                 lines.add(line);
             }
-
-            //System.out.println(lines);
 
         }catch (IOException e)
         {
