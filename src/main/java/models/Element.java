@@ -48,11 +48,11 @@ public class Element
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Element{" +
                 "elementName='" + elementName + '\'' +
-                ", element=" + position +
+                ", position=" + position +
+                ", weight=" + weight +
                 ", size=" + size +
                 '}';
     }

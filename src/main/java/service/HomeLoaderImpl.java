@@ -8,6 +8,8 @@ import models.Home;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
 
 public class HomeLoaderImpl implements HomeLoader
 {
@@ -24,14 +26,22 @@ public class HomeLoaderImpl implements HomeLoader
 
     public Home loadHome(String fileName, String separator)
     {
+        List<String> lines = new LinkedList<>();
         try(BufferedReader reader = new BufferedReader(new FileReader(fileName)))
         {
+            String line;
+            while((line = reader.readLine()) != null)
+            {
+                lines.add(line);
+            }
+
+            //System.out.println(lines);
 
         }catch (IOException e)
         {
             e.printStackTrace();
         }
 
-        return null;
+        return homeFactory.createHome(lines, separator);
     }
 }

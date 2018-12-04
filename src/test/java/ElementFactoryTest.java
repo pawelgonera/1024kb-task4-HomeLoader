@@ -22,6 +22,7 @@ public class ElementFactoryTest
         //is
         Element result = elementFactory.createElement(elementStr, separator);
         //expected
+        System.out.println(result);
         assertEquals(lampka, result);
     }
 }

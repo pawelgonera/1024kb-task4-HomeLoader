@@ -5,14 +5,14 @@ import java.util.List;
 public class Home
 {
     private String homeName;
-    private String adress;
+    private String address;
     private int householdersCounter;
     private List<Room> rooms;
 
     public Home(String homeName, String adress, int householdersCounter, List<Room> rooms)
     {
         this.homeName = homeName;
-        this.adress = adress;
+        this.address = adress;
         this.householdersCounter = householdersCounter;
         this.rooms = rooms;
     }
@@ -26,11 +26,11 @@ public class Home
     }
 
     public String getAdress() {
-        return adress;
+        return address;
     }
 
     public void setAdress(String adress) {
-        this.adress = adress;
+        this.address = adress;
     }
 
     public int getHouseholdersCounter() {
@@ -54,7 +54,7 @@ public class Home
     {
         return "Home{" +
                 "homeName='" + homeName + '\'' +
-                ", adress='" + adress + '\'' +
+                ", adress='" + address + '\'' +
                 ", householdersCounter=" + householdersCounter +
                 ", rooms=" + rooms +
                 '}';

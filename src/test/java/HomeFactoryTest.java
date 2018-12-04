@@ -25,8 +25,8 @@ public class HomeFactoryTest
         final String separator = "%";
         final Element biurko = new Element("Biurko", new Position(10.0f, 3.5f, 0.0f), 30.3f, new Size(2.0f, 1.5f, 0.7f));
         final Element lampka = new Element("Lampka", new Position(10.0f, 35f, 0.7f), 0.5f, new Size(0.1f, 0.1f, 0.1f));
-        final Room pokojMamy = new Room("Pokoj mamy", "#00ff00", 25.0f, 10.5f, Arrays.asList(biurko, lampka));
-        final Room pokojTaty = new Room("Pokoj taty", "#ffffff", 23.0f, 10.5f, Arrays.asList(lampka));
+        final Room pokojMamy = new Room("Pokoj mamy", "#00ff00", 10.5f, 25.0f, Arrays.asList(biurko, lampka));
+        final Room pokojTaty = new Room("Pokoj taty", "#ffffff", 10.5f, 23.0f, Arrays.asList(lampka));
         final Home home = new Home("Dom na zielonym wzgórzu", "Ulica zielona 33/24", 3, Arrays.asList(pokojMamy, pokojTaty));
         //is
         Home result = homeFactory.createHome(homeStr, separator);
