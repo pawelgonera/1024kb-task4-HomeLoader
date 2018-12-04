@@ -26,7 +26,7 @@ public class RoomFactoryTest
         //is
         Room result = roomFactory.createRoom(homeStr, separator);
         //expected
-        assertEquals(myRoom, result);
+        assertEquals(myRoom.toString(), result.toString());
     }
 }
 

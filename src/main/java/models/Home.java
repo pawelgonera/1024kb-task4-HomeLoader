@@ -54,7 +54,7 @@ public class Home
     {
         return "Home{" +
                 "homeName='" + homeName + '\'' +
-                ", adress='" + address + '\'' +
+                ", address='" + address + '\'' +
                 ", householdersCounter=" + householdersCounter +
                 ", rooms=" + rooms +
                 '}';

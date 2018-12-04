@@ -4,8 +4,7 @@ import factories.ElementFactoryImpl;
 import models .*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.Arrays;
-import java.util.List;
+
 
 public class ElementFactoryTest
 {
@@ -22,8 +21,7 @@ public class ElementFactoryTest
         //is
         Element result = elementFactory.createElement(elementStr, separator);
         //expected
-        System.out.println(result);
-        assertEquals(lampka, result);
+        assertEquals(lampka.toString(), result.toString());
     }
 }
 

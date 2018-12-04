@@ -31,7 +31,7 @@ public class HomeFactoryTest
         //is
         Home result = homeFactory.createHome(homeStr, separator);
         //expected
-        assertEquals(home, result);
+        assertEquals(home.toString(), result.toString());
     }
 }
 
