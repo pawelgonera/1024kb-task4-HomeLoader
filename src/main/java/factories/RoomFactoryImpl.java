@@ -32,14 +32,13 @@ public class RoomFactoryImpl implements RoomFactory
         roomDetails.put(RoomProperty.AREA, values[3]);
         roomDetails.put(RoomProperty.COUNT_ELEMENTS, values[4]);
 
-        int elementsCount = Integer.parseInt(roomDetails.get(RoomProperty.COUNT_ELEMENTS));
         List<Element> elements = new LinkedList<>();
 
+        int elementsCount = Integer.parseInt(roomDetails.get(RoomProperty.COUNT_ELEMENTS));
         for(int i = 1; i <= elementsCount; i++)
         {
             elements.add(elementFactory.createElement(lines.get(i), separator));
         }
-
 
         return new Room(
                 roomDetails.get(RoomProperty.ROOM_NAME),

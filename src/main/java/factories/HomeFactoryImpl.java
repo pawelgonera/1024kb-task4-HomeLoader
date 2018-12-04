@@ -32,21 +32,21 @@ public class HomeFactoryImpl implements HomeFactory
         homeDetails.put(HomeProperty.ROOM_COUNTS, values[3]);
 
         List<Room> rooms = new LinkedList<>();
-        List<String> nextLines = new LinkedList<>();
-        for(int i = 1; i < lines.size();)
+        List<String> roomsLines = new LinkedList<>();
+
+        int roomsCount = Integer.parseInt(homeDetails.get(HomeProperty.ROOM_COUNTS));
+        int roomLinesIndex = 1;
+        for(int i = 0; i < roomsCount; i++)
         {
-            if(lines.get(i).startsWith("Pokoj"))
+            String[] roomValues = lines.get(roomLinesIndex).split(separator);
+            int elementsCount = Integer.parseInt(roomValues[4]);
+            roomsLines.add(lines.get(roomLinesIndex++));
+            for(int j = 0; j < elementsCount; j++)
             {
-                String[] room = lines.get(i).split(separator);
-                int elementsCount = Integer.parseInt(room[4]);
-                for(int j = 0; j <= elementsCount; j++)
-                {
-                    nextLines.add(lines.get(i));
-                    i++;
-                }
-                rooms.add(roomFactory.createRoom(nextLines, separator));
-                nextLines.clear();
+                roomsLines.add(lines.get(roomLinesIndex++));
             }
+            rooms.add(roomFactory.createRoom(roomsLines, separator));
+            roomsLines.clear();
         }
 
         return new Home(
