@@ -1,7 +1,7 @@
 
 import api.RoomFactory;
 import factories.RoomFactoryImpl;
-import models .*;
+import models.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;

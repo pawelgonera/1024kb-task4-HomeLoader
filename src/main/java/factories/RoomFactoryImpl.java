@@ -11,8 +11,8 @@ import java.util.*;
 public class RoomFactoryImpl implements RoomFactory
 {
     private static RoomFactoryImpl instance = null;
-    ElementFactory elementFactory = ElementFactoryImpl.getInstance();
-    Map<RoomProperty, String> roomDetails = new EnumMap<>(RoomProperty.class);
+    private ElementFactory elementFactory = ElementFactoryImpl.getInstance();
+    private Map<RoomProperty, String> roomDetails = new EnumMap<>(RoomProperty.class);
 
     public static RoomFactoryImpl getInstance()
     {
